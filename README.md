@@ -24,7 +24,7 @@ Loading the system automatically configures the `ED` function.
 ## REPL evaluation mode (sbcl/swank)
 
 - `ACTIVATE-REPL-EVALUATION-MODE [ :COMPILE | :INTERPRET ]`
-- `DEACTIVATE-REPL-EVALUATION-MODE` 
+- `DEACTIVATE-REPL-EVALUATION-MODE`
 
 Locally override how SBCL evaluates code in the REPL. This works by
 configuring `swank-repl::*listener-eval-function*` (in Swank), so
@@ -48,10 +48,10 @@ compiler..
 
     USER> (common-setup:activate-repl-evaluation-mode :interpret)
     ...
-    
+
     USER> sb-ext:*evaluator-mode*
     :INTERPRET
-    
+
 Note that this is bound around each evaluated form, so doing `SETQ` in
 the REPL doesn't change the binding.
 
@@ -61,5 +61,3 @@ In order to stop overriding the default value, call `DEACTIVATE-REPL-EVALUATION-
 
     USER> (common-setup:deactivate-repl-evaluation-mode)
     ...
-    
-
