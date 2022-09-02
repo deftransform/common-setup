@@ -9,10 +9,10 @@ Currently supports Emacs.
 Load one of the available system to setup the environment:
 
     ;; when using Slime/Swank
-    (ql:quickload :common-setup.swank)
+    (ql:quickload :common-setup/swank)
 
     ;; when using Sly/Slynk
-    (ql:quickload :common-setup.slynk)
+    (ql:quickload :common-setup/slynk)
 
 ## Editor integration
 

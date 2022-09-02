@@ -34,18 +34,6 @@
       (return))
     (error "unavailable")))
 
-#+sbcl
-(defvar *eval-form-preprocessor* #'identity)
-
-#+sbcl
-(defvar *eval-around* #'funcall)
-
-#+sbcl
-(defun sbcl-listener-eval-function (form)
-  (funcall *eval-around*
-           #'swank-repl::repl-eval
-           (funcall *eval-form-preprocessor* form)))
-
 (defun activate-repl-evaluation-mode ())
 (defun deactivate-repl-evaluation-mode ())
   
