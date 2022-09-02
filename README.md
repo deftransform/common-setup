@@ -21,7 +21,7 @@ Loading the system automatically configures the `ED` function.
     ;; should work and open the file in Emacs
     (ed "/path/to/some/file")
 
-## REPL evaluation mode
+## REPL evaluation mode (sbcl)
 
 This is mostly useful for SBCL, which by default compiles code: while
 compiling code in general is good, in the REPL most of the warnings are in
@@ -52,3 +52,5 @@ In order to stop overriding the default value, call `DEACTIVATE-REPL-EVALUATION-
     
 This works by configuring `swank-repl::*listener-eval-function*` (in
 Swank), so evaluation from a buffer is not affected by this mechanism.
+
+The two functions do nothing on other implementations.
